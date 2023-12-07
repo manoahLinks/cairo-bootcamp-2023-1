@@ -13,4 +13,5 @@ fn main() {
     calculations::sub(200, 50);
     calculations::mutiply(50, 5);
     calculations::div(50, 5);
+    calculations::check_even(20, 5);
 }

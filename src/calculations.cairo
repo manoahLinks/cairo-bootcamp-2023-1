@@ -26,3 +26,16 @@ fn div(num_7: u32, num_8: u32) -> u32 {
    result
 }
 
+fn check_even (num_1: usize, num_2: usize) -> bool {
+  
+  let result: usize = add(num_1, num_2);
+
+  if result % 2 == 0 {
+      'true'.print();
+      true
+  }else{
+      'false'.print();
+      false
+  }
+}
+
