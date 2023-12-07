@@ -9,7 +9,8 @@ mod calculations;
 fn main() {
     gm_cairo::gm_cairo();
     intro_to_felt::intro_to_felt();
-    calculations::add(30, 10);
-    calculations::subract(100, 50);
+    calculations::add(10, 15);
+    calculations::sub(200, 50);
+    calculations::mutiply(50, 5);
+    calculations::div(50, 5);
 }
-
