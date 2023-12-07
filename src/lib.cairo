@@ -9,8 +9,7 @@ mod calculations;
 fn main() {
     gm_cairo::gm_cairo();
     intro_to_felt::intro_to_felt();
-    let result = calculations::add(30, 10);
-    let result_to_felt: felt252 = result.into();
-    result_to_felt.print();
+    calculations::add(30, 10);
+    calculations::subract(100, 50);
 }
 
