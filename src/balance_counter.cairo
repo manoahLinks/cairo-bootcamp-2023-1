@@ -13,4 +13,8 @@ mod Balance_Counter {
         self.balance.write(amount);
     }
 
+    #[external(v0)]
+    fn get_balance(self: @ContractState) -> u256 {
+        self.balance.read()
+    }
 }
