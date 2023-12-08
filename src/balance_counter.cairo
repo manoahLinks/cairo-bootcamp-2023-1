@@ -6,7 +6,8 @@ mod Balance_Counter {
     #[storage]
     struct Storage {
         owner: ContractAddress,
-        balance: u256
+        balance: u256,
+        caller_balance: LegacyMap<ContractAddress, u256>
     }
 
 
@@ -31,5 +32,19 @@ mod Balance_Counter {
     #[external(v0)]
     fn get_balance(self: @ContractState) -> u256 {
         self.balance.read()
+    }
+
+    // this function when called increases the balance of the caller
+    #[external(v0)]
+    fn set_caller_balance(ref self: ContractState, amount: u256) {
+        let caller_address = get_caller_address();
+        let current_caller_balance = self.caller_balance.read(caller_address);
+        self.caller_balance.write(caller_address, current_caller_balance + amount);
+    }
+
+    // this utility function allows the balance of the caller to be read by passing address to the legacy map
+    #[external(v0)]
+    fn get_caller_balance(self: @ContractState) -> u256 {
+        self.caller_balance.read(get_caller_address())
     }
 }
