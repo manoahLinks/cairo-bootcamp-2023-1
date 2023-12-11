@@ -37,4 +37,22 @@ mod Class_Demo {
     fn get_name(self: @ContractState) -> felt252 {
         self.name.read()
     }
+    fn get_w_address(self: @ContractState) -> ContractAddress {
+        self.w_address.read()
+    }
+    fn get_age(self: @ContractState) -> u8 {
+        self.age.read()
+    }
+    fn get_is_active(self: @ContractState) -> bool {
+        self.is_active.read()
+    }
+    fn get_has_reward(self: @ContractState) -> bool {
+        self.has_reward.read()
+    }
+    fn get_reward_balance(self: @ContractState) -> u256 {
+        self.reward_balance.read()
+    }
+    fn get_is_owing(self: @ContractState) -> bool {
+        self.is_owing.read()
+    }
 }
