@@ -37,7 +37,4 @@ mod Class_Demo {
     fn get_name(self: @ContractState) -> felt252 {
         self.name.read()
     }
-
-    
-   
 }
