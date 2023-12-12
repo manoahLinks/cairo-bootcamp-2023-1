@@ -17,7 +17,7 @@ mod Class_Demo {
     fn set_class_character(
         ref self: ContractState,
         _name: felt252,
-        _w_address: ContractAddress,
+        _w_address: ContractAddress, 
         _age: u8,
         _is_active: bool,
         _has_reward: bool,
@@ -61,7 +61,7 @@ mod Class_Demo {
     #[external(v0)]
     fn get_reward_balance(self: @ContractState) -> u256 {
         self.reward_balance.read()
-
+    }
 
     #[external(v0)]
     fn get_is_owing(self: @ContractState) -> bool {

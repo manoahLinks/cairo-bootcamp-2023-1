@@ -1,6 +1,6 @@
-# Introduction to Cairo
+# Introduction to Starknet Contract
 
-This repo introduces `Cairo - CPU-AIR-o` and all the basics you need to get started writing Cairo programs
+This repo introduces the core fundamentals for writing, declariing and deploying Starknet contracts
 
 
 To run, try out the following commands:
